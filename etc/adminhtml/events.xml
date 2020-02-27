@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_product_save_after">
+        <observer name="ChronosControllerActionCatalogProductSaveEntityAfter" instance="Burstcol\Chronos\Observer\ProductSaveEntityAfter"/>
+    </event>
+    <event name="customer_save_after">
+        <observer name="ChronosCustomerSaveAfter" instance="Burstcol\Chronos\Observer\CustomerSaveAfter" />
+    </event>
+	<event name="sales_order_save_after">
+        <observer name="BurstcolSalesOrderPlaceAfter" instance="Burstcol\Chronos\Observer\SalesPlaceAfter"/>
+    </event>
+    <event name="sales_order_invoice_save_after">
+        <observer name="BurstcolSalesOrderInvoiceSaveAfter" instance="Burstcol\Chronos\Observer\SalesOrderInvoiceSaveAfter"/>
+    </event>
+    <event name="sales_order_shipment_save_after">
+        <observer name="BurstcolSalesOrderShipmentSaveAfter" instance="Burstcol\Chronos\Observer\SalesOrderShipmentSaveAfter"/>
+    </event>
+    <event name="order_cancel_after">
+        <observer name="BurstcolSalesOrderCancelAfter" instance="Burstcol\Chronos\Observer\SalesOrderCancelAfter"/>
+    </event>
+</config>
